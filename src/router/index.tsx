@@ -1,6 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
+  GetStarted,
   SplashScreen,
 } from '../pages';
 
@@ -14,6 +15,13 @@ const index = () => {
         options={{headerShown: false}}
       />
     </Stack.Navigator>
+    <Stack.Navigator>
+    <Stack.Screen
+      name="GetStarted"
+      component={GetStarted}
+      options={{headerShown: false}}
+    />
+  </Stack.Navigator>
   );
 };
 
