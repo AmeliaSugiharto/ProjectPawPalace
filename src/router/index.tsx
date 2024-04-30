@@ -10,6 +10,7 @@ import {
   Article,
   Profile,
   Dog1,
+  DataAdopter,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -59,6 +60,11 @@ const index = () => {
       <Stack.Screen
         name="Dog1"
         component={Dog1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DataAdopter"
+        component={DataAdopter}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

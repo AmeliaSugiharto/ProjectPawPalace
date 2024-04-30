@@ -19,8 +19,7 @@ const Article = ({ navigation }) => {
       <View style={styles.contentContainer2}>
         <View style={styles.containerBox2}>
           <View style={styles.textPlaceholder1}>
-            <Text style={styles.placeholderText1}>Memilih Hewan Peliharaan yang</Text>
-            <Text style={styles.placeholderText1}>Tepat : Kucing atau Anjing</Text>
+            <Text style={styles.placeholderText1}>Choosing the Right Pet: Cat or Dog</Text>
           </View>
         </View>
         <View>
@@ -30,15 +29,15 @@ const Article = ({ navigation }) => {
               style={styles.photo2}
             />
           </TouchableOpacity>
-          <View style={styles.textPlaceholder3} />
+          <View style={styles.textPlaceholder3}>
+            <Text style={styles.placeholderText3}>Active & Spacious? Dog. Busy & Compact? Cat. Cuddles? Choose your style!</Text>
+          </View>
         </View>
       </View>
       <View style={styles.contentContainer3}>
         <View style={styles.containerBox3}>
           <View style={styles.textPlaceholder2}>
-            <Text style={styles.placeholderText2}>Memelihara Kucing atau </Text>
-            <Text style={styles.placeholderText2}>Anjing baik bagi</Text>
-            <Text style={styles.placeholderText2}>Kesehatan Otak</Text>
+            <Text style={styles.placeholderText2}>Getting a Cat or Dog is Good for Brain Health</Text>
           </View>
         </View>
         <TouchableOpacity onPress={() => openWebsite('https://www.kompas.id/baca/ilmiah-populer/2022/02/24/memelihara-kucing-atau-anjing-baik-bagi-kesehatan-otak')}>
@@ -48,23 +47,19 @@ const Article = ({ navigation }) => {
           />
         </TouchableOpacity>
       </View>
-
       <View style={styles.contentWrapper3}>
         <View style={styles.horizontalWrapper2}>
           <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
             <Image
               source={require('../../assets/image/home.png')}
-              style={[
-                styles.image,
-                { width: 40, height: 35, marginLeft: 51, marginTop: 12 },
-              ]}
+              style={{ width: 40, height: 35, marginLeft: 51, marginTop: 12 }}
             />
           </TouchableOpacity>
           <View style={{ flex: 1, alignItems: 'center' }}>
             <TouchableOpacity onPress={() => navigation.navigate('Article')}>
               <Image
                 source={require('../../assets/image/article.png')}
-                style={[styles.image, { width: 45, height: 35, marginTop: 15 }]}
+                style={{ width: 45, height: 35, marginTop: 15 }}
               />
             </TouchableOpacity>
           </View>
@@ -73,7 +68,7 @@ const Article = ({ navigation }) => {
               source={require('../../assets/image/profile.png')}
               style={[
                 styles.image,
-                { width: 46, height: 42, marginRight: 45, marginTop: 10 },
+                { width: 46, height: 42, marginRight: 45, marginTop: 10, color:'black' },
               ]}
             />
           </TouchableOpacity>
@@ -82,6 +77,7 @@ const Article = ({ navigation }) => {
     </ScrollView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -94,6 +90,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 16,
     color: 'black',
+  },
+  contentWrapper3:{
+    flexDirection:'row',
+    backgroundColor:'#FFD0D0',
+    height: 49,
   },
   contentContainer: {
     flexDirection: 'row',
@@ -112,13 +113,13 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     marginTop: 70,
-    width: 360,
+    width: 370,
   },
   containerBox3: {
     flex: 1,
     flexDirection: 'row',
     marginTop: 42,
-    width: 360,
+    width: 370,
   },
   photo1: {
     width: '100%',
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
   },
   textPlaceholder1: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#FFD0D0',
     height: 170,
     borderRadius: 10,
     paddingBottom: 50,
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
   },
   textPlaceholder2: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#FFD0D0',
     height: 170,
     borderRadius: 10,
     paddingBottom: 50,
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
   },
   textPlaceholder3: {
-    backgroundColor: 'pink',
+    backgroundColor: '#FFD0D0',
     height: 132,
     width: 343,
     borderRadius: 10,
@@ -187,6 +188,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Poppins-SemiBold',
     marginLeft: 92,
+    marginTop: 46,
   },
   placeholderText2: {
     textAlign: 'center',
@@ -194,6 +196,14 @@ const styles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Poppins-SemiBold',
     marginRight: 90,
+    marginTop: 46,
+  },
+  placeholderText3: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: 'black',
+    fontFamily: 'Poppins-SemiBold',
+    marginLeft: 2,
   },
 });
 

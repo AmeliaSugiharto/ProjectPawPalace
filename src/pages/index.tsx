@@ -7,6 +7,7 @@ import Homepage2 from './Homepage2';
 import Article from './Article';
 import Profile from './Profile';
 import Dog1 from './Dog1';
+import DataAdopter from './DataAdopter';
 
 export {
   SplashScreen,
@@ -18,4 +19,5 @@ export {
   Article,
   Profile,
   Dog1,
+  DataAdopter,
 };

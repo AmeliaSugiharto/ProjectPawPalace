@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
-const Dog1 = () => {
+const Dog1 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -21,7 +21,7 @@ const Dog1 = () => {
           <Text style={styles.iconText}>9 Kg weight</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.adoptButton}>
+      <TouchableOpacity style={styles.adoptButton} onPress={() => navigation.navigate('DataAdopter')}>
         <Text style={styles.adoptButtonText}>Adopt Now</Text>
       </TouchableOpacity>
     </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#FEEEF7', // Light pink background
+    backgroundColor: '#FEEEF7', 
   },
   petImage: {
     width: '100%',
