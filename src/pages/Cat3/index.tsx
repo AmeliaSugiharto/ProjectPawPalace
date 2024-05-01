@@ -5,10 +5,10 @@ const Dog1 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/image/husky.png')}
+        source={require('../../assets/image/american.png')}
         style={styles.petImage}
       />
-      <Text style={styles.petName}>BABEL</Text>
+      <Text style={styles.petName}>CINDY</Text>
       <View style={styles.infoContainer}>
         <View style={styles.iconContainer}>
           {/* Gender icon */}

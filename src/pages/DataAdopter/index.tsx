@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'rea
 import React from 'react';
 import {TextInput} from '../../components/atoms';
 
-const DataAdopter = () => {
+const DataAdopter = ({navigation}) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -30,7 +30,7 @@ const DataAdopter = () => {
           style={styles.kakicat1}
         />
         <View style={styles.containerA}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity onPress={() => navigation.navigate('Ulasan')}>
             <Text style={styles.apply}>
               APPLY NOW
             </Text>
