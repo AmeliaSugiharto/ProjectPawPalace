@@ -1,3 +1,3 @@
-import TextInput from "./TextInput";
+import BackButton from './BackButton';
 
-export {TextInput};
+export {BackButton};

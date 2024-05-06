@@ -47,32 +47,25 @@ const Article = ({ navigation }) => {
           />
         </TouchableOpacity>
       </View>
-      <View style={styles.contentWrapper3}>
-        <View style={styles.horizontalWrapper2}>
-          <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
-            <Image
-              source={require('../../assets/image/home.png')}
-              style={{ width: 40, height: 35, marginLeft: 51, marginTop: 12 }}
-            />
-          </TouchableOpacity>
-          <View style={{ flex: 1, alignItems: 'center' }}>
-            <TouchableOpacity onPress={() => navigation.navigate('Article')}>
-              <Image
-                source={require('../../assets/image/article.png')}
-                style={{ width: 45, height: 35, marginTop: 15 }}
-              />
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-            <Image
-              source={require('../../assets/image/profile.png')}
-              style={[
-                styles.image,
-                { width: 46, height: 42, marginRight: 45, marginTop: 10, color:'black' },
-              ]}
-            />
-          </TouchableOpacity>
-        </View>
+      <View style={styles.bottomContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+          <Image
+            source={require('../../assets/image/home.png')}
+            style={styles.bottomIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Article')}>
+          <Image
+            source={require('../../assets/image/article.png')}
+            style={styles.bottomIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <Image
+            source={require('../../assets/image/profile.png')}
+            style={styles.bottomIcon}
+          />
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -90,11 +83,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 16,
     color: 'black',
-  },
-  contentWrapper3:{
-    flexDirection:'row',
-    backgroundColor:'#FFD0D0',
-    height: 49,
   },
   contentContainer: {
     flexDirection: 'row',
@@ -204,6 +192,19 @@ const styles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Poppins-SemiBold',
     marginLeft: 2,
+  },
+  bottomContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#FFD0D0',
+    height: 55,
+    width: 420,
+    right: 20,
+    alignItems: 'center',
+  },
+  bottomIcon: {
+    width: 40,
+    height: 35,
   },
 });
 
